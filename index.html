@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="خمن اسم الفسلم او المسلسل الذي يفكر فيه شريكك في اللعب ">
+    <meta name="keywords" content="guess, film, series, تخمين, فيلم, مسلسل">
+    <title>Guess Movei Name</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                خمن <span>اسم</span> الفيلم
+            </a>
+            <button class="btn-change-color" id="btn-change-color">
+                الالوان
+                <i class="fa-solid fa-palette"></i>
+            </button>
+            <div class="colors-collection">
+                <select name="colors" id="colors">
+                    <optgroup label="لون الخلفية">
+                        <option value="white">أبيض</option>
+                        <option value="black">أسود</option>
+                    </optgroup>
+                    <optgroup label="اللون الرئيسي">
+                        <option value="#FF0000">أحمر</option>
+                        <option value="#FF851B">برتقالي</option>
+                        <option value="#FFDC00">أصفر</option>
+                        <option value="#2ECC40">أخضر</option>
+                        <option value="#0074D9">أزرق</option>
+                        <option value="#001f3f">أزرق غامق</option>
+                        <option value="#7FDBFF">نيلى</option>
+                        <option value="#B10DC9">بنفسجي </option>
+                        <option value="#85144b">نبيتى </option>
+                        <option value="#F012BE">وردى </option>
+                    </optgroup>
+                </select>
+                <button id="btn-confirm-change-color">
+                    تغيير
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="chooser">
+                <label for="chosen-movei">
+                    الاسم المختار
+                </label>
+                <input type="text" id="chosen-movei" class="chosen-movei" placeholder="اكتب اسم الفيلم او المسلسل">
+                <button id="confirm-chosen-movei" class="confirm-chosen-movei">
+                    تأكيد الاسم
+                </button>
+                <div class="overlay"></div>
+            </div>
+            <div class="guesser">
+                <div class="chosen-char-div">
+                    <label for="chosen-char">
+                        خمن
+                    </label>
+                    <input type="text" id="chosen-char" class="chosen-char" placeholder="حرف واحد" maxlength="1">
+                    <button id="confirm-chosen-char">
+                        تأكيد
+                    </button>
+                    <div class="overlay"></div>
+                </div>
+                <div class="wrong">
+                    <label for="wrong-div">
+                        حروف خاطئة
+                        <i class="fa-sharp fa-solid fa-xmark"></i>
+                    </label>
+                    <div class="wrong-div" id="wrong-div">
+                        <p class="wrong-char-square"></p>
+                        <p class="wrong-char-square"></p>
+                        <p class="wrong-char-square"></p>
+                        <p class="wrong-char-square"></p>
+                        <p class="wrong-char-square"></p>
+                        <p class="wrong-char-square"></p>
+                        <p class="wrong-char-square"></p>
+                        <p class="wrong-char-square"></p>
+                        <p class="wrong-char-square"></p>
+                        <p class="wrong-char-square"></p>
+                        <p class="wrong-char-square"></p>
+                        <p class="wrong-char-square"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="correct-and-full-name">
+                <label for="correct-div">
+                    حروف صحيحة
+                    <i class="fa-sharp fa-solid fa-check"></i>
+                </label>
+                <div class="correct-div" id="correct-div">
+                    <!-- para childern will create in javaScript file  -->
+
+                </div>
+
+                <label for="full-name">
+                    اسم الفيلم
+                </label>
+                <div class="full-name" id="full-name"></div>
+                <button id="one-more" class="one-more">
+                    العب مرة أخرى
+                </button>
+            </div>
+        </div>
+    </main>
+    <section class="result" id="result">
+        <div class="container">
+            <p>
+                الفائز =>
+                <span id="winner"></span>
+            </p>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>designed by <span>Hamada Yasser</span> in 2022</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
